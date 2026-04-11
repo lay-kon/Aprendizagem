@@ -1,0 +1,67 @@
+
+
+COMANDOS GENÉRICOS DO TERMINAL
+
+touch => para criar um arquivo
+nano => para abrir um arquivo pelo terminal
+cat => para exibir na tela do terminal o conteudo de um arquivo
+cat >> => usado para permitir escrever no terminal que nem o nano limitado
+mv => para mover um diretorio ou ficheiro, também pode servir para renomear
+rm => para remover um ficheiro
+mkdir => para criar uma um diretorio
+rmdir => para remover um diretorio
+
+
+
+COMANDOS PARA O GIT:
+
+git init => usado para iniciar o serviço git em um porojecto do vazio ou com ficheiros existentes
+git add file => usado para adicionar um ficheiro no estagio de modificado pronto para poder ser comitado
+git status => usado para verificar o etado do repositório (git)
+git add . => usado para adicionar todos os ficheirosno modo modificado à fim de poderm serem comitados
+git restore --staged . => ussdo para remover todos os ficheiros do estagio
+git rm --cached file => usado para remover do estagio um arquivo
+
+
+git commit -m "dec" => para comitar um ou mais arquivos e deixar uma descrição do comite
+git log => permite rever o histórico de comites com mais detalhes (nome do autor, data, etc...)
+git log --oneline => permite rever o histórico de comitescom menos detalhes (id e a descrição)
+
+
+
+VOLTANDO NA LINHA DE TEMPO
+
+git checkout id_do_commit => coloca o teu projecto até como estava nessa etapa (nesse tempo, ele faz um checkout desse tempo ou ponto do projecto)
+git checkout nome_branch => volta até o ponto autual do teu projecto em um branch, também é usado para trocar de branch
+git revert id_do_commit => ele reverte (desfaz) um commit mais altera o histórico mas não remove a originalidade, pois, ele incrementa no histórico um commit da ação de reverter
+git reset id_do_commit => ele vai voltar no tempo, mas algumas alterações do futuro permanetecem, que pode possibilitar comitar tudo em um commit
+git reset id_do_commit --hard => ele volta de vez no passado, sem possibilidade de recuperação
+
+
+OBS: quando queremos que o git não rastreia um arquivo ou pasta no nosso projecto (Ex.: um arquivo .env ou .mvm), cria-se um arquivo .gitignore, e nele lista-se todo arquivo que queremos que o git deve ignorar (tudo "pasta, ficheiros" que forem listados no arquivo .gitignore serão ignorados pelo git, ou seja, o git não rastreia esses arquivos)
+
+
+
+CRIANDO BRANCHES
+
+git branch => exibe a lista de branches que tem o repositório (git)
+git branch nome_do_branch => usado para criar um branch (Ex.: git branch pagamento-mercado, criar um branch mercado)
+git checkout -b nome_do_branch => usado para criar e ao mesmo tempo entar nesse branch
+git branch -d nome_do_branch => deleta o branch se não tiver nenhum commit ou se já for mergido com o branch main (master)
+git branch -D nome_do_branch => deleta o branch sem nenhuma interrupção (deleta direito)
+
+
+OBS: as alterações feitas em um branch não aprerece noutro, e no branch master os arquivos criados nos outros branches não influenciam em nada, são usualmente criados para desenvolver uma feture em teste, para não mexer com a linha (branch) principal e no final só juntar (fazer o merger)
+
+
+
+MERGENDO BRANCHES
+
+git merge nome_do_branch => para fazer o merger (a fusão de branches)
+
+OBS: para fazer o merger, devemos estar primeiramente no branch que vai puxar o outro, por exemplo, se queremos colocar (juntar ou merger) um branch ao branch master, devemosestra no branch master, e só assim rodar o comando para juntar a feture nova a linha actual, ou seja, devemos estar no branch de destino para indicar que o branch que sera mencionado sera juntado ou mergido ao branch actual
+
+
+FAZENDO PUCH, PULL E CLONE
+
+
