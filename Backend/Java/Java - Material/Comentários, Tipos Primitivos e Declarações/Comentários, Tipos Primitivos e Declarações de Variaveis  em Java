@@ -1,0 +1,65 @@
+COMENTANDO SEU CÓDIGO:
+
+//texto -> Este é um comentário de uma só linha
+
+/*texto*/ -> Este é o comentário de Multiplas linhas
+
+/** texto  */ -> Este é o comtário para documentação
+
+
+
+TIPOS PRIMITIVOS:
+
+1)_ int: inteiro. Ex.: 3; 5466; 64646
+  - Os inteiros são uma familia no Java:
+    * byte  = 1byte  de memória
+    * short = 2bytes de memória
+    * int   = 4bytes de memória
+    * long  = 8bytes de memória
+
+2)_ float: valor flutuante, e ao declar uma variavel como float, deve se colocar antes do final da declaração (antes do ponto e vírgula  ";") a letra `f` minusculo.
+  - Os valores flutuantes ou números reais são uma familia no Java:
+    * float  = 4bytes de memória
+    * double = 8bytes de memória
+
+3)_ char: caracteres e deve ser sempre colocada entre aspas simples. Ex.: 'A'; 'D'
+  - Os valores literais são uma familia no Java:
+      * char   = 1byte de memória
+      * String = 1byte/letra de memória
+      
+4)_ boolean: valores lógicos. Ex.: falso; verdadeiro; true; false
+      * boolean = 1bit de memória
+
+
+DECLARAÇÃO DE VARIAVEIS:
+
+1)_ Simples: tipo_primitivo nome_da_variavel;
+
+2)_ typecast: tipo_primitivo nome_da_variavel = (tipo_primitivo) valor;
+
+3)_ Wrapper Class: class_do_tipo_primitivo = new  nome_da_variavel class_do_tipo_primitivo ();
+  * Wrapper class de tipos primitivos:
+    - byte    : Byte
+    - short   : Short
+    - inteiro : Integer
+    - long    : Long
+    - float   : Float
+    - double  : Double
+    - char    : Character
+    - ....    : String
+    - boolean : Boolean
+    
+    
+ATRIBUIÇÃO DE VALORES:
+
+1)_ Atribuição Simples: Ex.: int idade = 3;
+
+
+2)_ Atribuição Especifica: Por Java ser uma linguagem fortimente tipada, caso for necessário fazer tramitações (...) entre tipos, deve se fazer conversões ou especificações. por exemplo, podes dizer que o valor 5 é inteiro e que também pode ser real 5.0, ou seja, usada para especificar tipos de valores específicos.
+
+Uma das tecnicas mais comun de se especificar um valor é usando o typecast (...). Ex.: int idade = (int) 3;
+O int entre parênteses antes do 3 quer dizer considere esse valor como inteiro.
+
+
+3)_ Atribuição por classe: Esse tipo de atribuição ou declaração é feita usando classe e o resultado da-se o nome de objecto não variavel.
+Ex.: Integer idade = new Integer (3);
