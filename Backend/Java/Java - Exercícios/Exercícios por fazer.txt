@@ -1,0 +1,6 @@
+1º Detetar a data actual do sistema
+2º Detetar o idioma do sistema
+3º Detetar a resolução do da tela do sistema
+4º Detetar o idioma do teclado do sistema
+5º Detetar se o CapsLock esta ativado
+6º Calcular a idade tendo em conta o ano actual

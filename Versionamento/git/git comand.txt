@@ -1,6 +1,4 @@
-
-
-COMANDOS GENÉRICOS DO TERMINAL
+1º COMANDOS GENÉRICOS DO TERMINAL
 
 touch => para criar um arquivo
 nano => para abrir um arquivo pelo terminal
@@ -13,7 +11,7 @@ rmdir => para remover um diretorio
 
 
 
-COMANDOS PARA O GIT:
+2º COMANDOS PARA O GIT:
 
 git init => usado para iniciar o serviço git em um porojecto do vazio ou com ficheiros existentes
 git add file => usado para adicionar um ficheiro no estagio de modificado pronto para poder ser comitado
@@ -29,7 +27,7 @@ git log --oneline => permite rever o histórico de comitescom menos detalhes (id
 
 
 
-VOLTANDO NA LINHA DE TEMPO
+3º VOLTANDO NA LINHA DE TEMPO
 
 git checkout id_do_commit => coloca o teu projecto até como estava nessa etapa (nesse tempo, ele faz um checkout desse tempo ou ponto do projecto)
 git checkout nome_branch => volta até o ponto autual do teu projecto em um branch, também é usado para trocar de branch
@@ -42,7 +40,7 @@ OBS: quando queremos que o git não rastreia um arquivo ou pasta no nosso projec
 
 
 
-CRIANDO BRANCHES
+4º CRIANDO BRANCHES
 
 git branch => exibe a lista de branches que tem o repositório (git)
 git branch nome_do_branch => usado para criar um branch (Ex.: git branch pagamento-mercado, criar um branch mercado)
@@ -55,13 +53,13 @@ OBS: as alterações feitas em um branch não aprerece noutro, e no branch maste
 
 
 
-MERGENDO BRANCHES
+5º MERGENDO BRANCHES
 
 git merge nome_do_branch => para fazer o merger (a fusão de branches)
 
 OBS: para fazer o merger, devemos estar primeiramente no branch que vai puxar o outro, por exemplo, se queremos colocar (juntar ou merger) um branch ao branch master, devemosestra no branch master, e só assim rodar o comando para juntar a feture nova a linha actual, ou seja, devemos estar no branch de destino para indicar que o branch que sera mencionado sera juntado ou mergido ao branch actual
 
 
-FAZENDO PUCH, PULL E CLONE
+6º FAZENDO PUCH, PULL E CLONE
 
 
