@@ -60,6 +60,20 @@ git merge nome_do_branch => para fazer o merger (a fusão de branches)
 OBS: para fazer o merger, devemos estar primeiramente no branch que vai puxar o outro, por exemplo, se queremos colocar (juntar ou merger) um branch ao branch master, devemosestra no branch master, e só assim rodar o comando para juntar a feture nova a linha actual, ou seja, devemos estar no branch de destino para indicar que o branch que sera mencionado sera juntado ou mergido ao branch actual
 
 
-6º FAZENDO PUCH, PULL E CLONE
+6º FAZENDO PUCH, FETCH, PULL E CLONE
+
+Para realizar puch, fetch, pull e clone, deve se primeiro ter a conexão entre o repositório local git e o repositório remoto github.
+Essa comunicaçao pode ser feita via ssh que é o recoemndado tendo em conta a segurança, no acto de desenvolvimento não é muito comum usar sempre o endereço do repositóriuo para fazer o puch ou pull... para isso, damos um apelido (por padrão da comunidadel, usa-se a palavra origin) ao endereço usando o seguinte comando: 
 
 
+git remote add origin endereco_do_repositorio -> Neste caso, o endereço do respositório passará a ser representado pela palavra origin
+
+git puch origin branch_name -> usado para empurrar os meus arquivos ou atualizações para o github
+
+git fetch origin -> este comando serve para comparar e verificar as atualizações do github e do git (serve para analizar os repositorios tanto local e o remoto afim de deixar tudo no mesmo ponto e sincronizado) decidindo se é necessário fazer um puch ou um pull no servidor.
+
+git pull origin -> usado para empurrar os meus arquivos ou atualizações para o github
+
+git clone origin -> usado para clonar um repositório completo de outren para nossa maquina local.
+Um repositório clonado nos permite estudar o código, analizar, etc...
+Clonar um repositório nunca foi no ato de copiar. Ao clonar um repositório não nos permite alterar os arquivos e mandar para o repositório do mesmo, porque o repositório clonado não nos pertence. Quando o intuito é colaborar com um projecto (fanzendo melhorias e etc..) é feito um "Fork, para sugerir sugestões de alterações do mesmo projecto ao responsavel do projecto"
