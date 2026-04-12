@@ -1,4 +1,4 @@
-COMENTANDO SEU CÓDIGO:
+1º COMENTANDO SEU CÓDIGO:
 
 //texto -> Este é um comentário de uma só linha
 
@@ -8,7 +8,8 @@ COMENTANDO SEU CÓDIGO:
 
 
 
-TIPOS PRIMITIVOS:
+
+2º TIPOS PRIMITIVOS:
 
 1)_ int: inteiro. Ex.: 3; 5466; 64646
   - Os inteiros são uma familia no Java:
@@ -31,7 +32,9 @@ TIPOS PRIMITIVOS:
       * boolean = 1bit de memória
 
 
-DECLARAÇÃO DE VARIAVEIS:
+
+
+3º DECLARAÇÃO DE VARIAVEIS:
 
 1)_ Simples: tipo_primitivo nome_da_variavel;
 
@@ -48,9 +51,11 @@ DECLARAÇÃO DE VARIAVEIS:
     - char    : Character
     - ....    : String
     - boolean : Boolean
+
     
     
-ATRIBUIÇÃO DE VALORES:
+    
+4º ATRIBUIÇÃO DE VALORES:
 
 1)_ Atribuição Simples: Ex.: int idade = 3;
 
@@ -63,3 +68,26 @@ O int entre parênteses antes do 3 quer dizer considere esse valor como inteiro.
 
 3)_ Atribuição por classe: Esse tipo de atribuição ou declaração é feita usando classe e o resultado da-se o nome de objecto não variavel.
 Ex.: Integer idade = new Integer (3);
+
+
+
+
+5º INCOMPATIBILIDADE ENTRE Numéricos e String:
+
+No Java existe uma grande incompatibilidades entre tipos Numéricos e String (Números <--> String)
+Analizando o seguinte caso:
+
+   int idade = 20;
+   String valor = idade;
+   
+Essa atribuição dará erro, porque os tipos não são compativeis, para este caso o typecast não seria a melhor solução.
+A melhor solução para a resolução deste problema é convertendo os valores. Para converter um valor em java deve se usar a sua classe wrapper.
+
+Solução: Convertendo os Valores:
+
+   int idade = 20;
+   String valor = Integer.toString(idade);
+   
+   Se fosse o contrário?
+   String idade= "20";
+   int valor = Integer.parseInt(idade);

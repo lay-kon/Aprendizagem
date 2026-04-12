@@ -1,0 +1,40 @@
+SAÍDA DE DADOS:
+
+Para saída de dados em java usa-se o comando System.out.print("texto");
+Por conta do "System" a instrução pode ser imprensa em qualquer sistema (PC, telefone, relógio, etc...) o "out" quer diser saída e "print" quer dizer imprimi.
+Este comando, em palavras miúdas quer dizer: "Imprimi na tela desse sistema a seguinte instrução".
+
+No Java existe quatro (4) formas para imprimir instruções na tela:
+   1º System.out.print("texto"); -> Imprimi valor na tela. Ex: System.out.print("Olá Mundo!");
+   
+   2º System.out.println("texto"); -> Imprimi o valor na tela e em seguida quebra uma linha. Ex.: System.out.println("Hello Word!");
+   
+   3º System.out.printf("%s","texto") -> Imprimi o valor formatado na tela. Ex.: System.out.printf("A sua altura é %f ",altura);
+   - Esse tipo de imprensão ela permite os argumentos de formatação, como por exemplo os comandos contra-barra (\n ; \t ; etc...).
+   
+   4º System.out.format("%s","texto"); -> Imprimi o valor formatado na tela. Ex.: System.out.printf("A sua altura é %f ",altura);
+   - Esse tipo de imprensão ela funciona que nem o printf, com mais algumas funcionalidades de formatação de dados.
+
+
+
+ENTRADA DE DADOS:
+
+O java vem com comandos de saída de dados mas não vem coi comandos de entrada de dados.
+Para entrada de dados no Java, usa-se a instância de um objecto da class Scanner e passa-se como argumento o "System.in".
+Desta forma permitindo que os valores possam ser lidos em qualquer sistema.
+por padrão, a classe Scanner vem incubida no java, para ser usada deve se importar tal como qualquer classe não é carregada automaticamente (no caso da biblioteca lang).
+
+A classe Scanner é uma classe que fraz parte do pacote "java.util", para ser importada usa-se o comando "import java.util.Scanner;"
+Em seguida, dentro do escopo a ser usada deve se criar uma instância: "Scanner = new nome_do_objecto_de_leitura Scanner (System.in);"
+
+Dependendo do que vai ser lido, o objecto de leitura (entrada de dados) poderá acessar métodos de leitura (Para exemplificar, vamos o nosso objecto sera "read"):
+   * Valores Inteiros          : read.nextInt();
+   * Valores Inteiros Longos   : read.nextLong();
+   * Valores Inteiros Curtos   : read.nextShort();
+   * Valores Inteiros Pequenos : read.nextByte();
+   * Valores Reais Double      : read.nextDouble();
+   * Valores Reais Flutuante   : read.nextFloat();
+   * Caracteres e String       : read.next();
+   * Valores String            : read.nextLine();
+   * Valores Booleanos         : read.nextBoolean();
+
