@@ -1,0 +1,12 @@
+No que diz respeito à variveis no Java, é de realçar que existe variaveis normais, pois o seu estado pode mudar (variar) ao long do tempo ao decorrer da execução do programa. Mas existe variaveis especificas que possuiem tratamento diferentes das demais, no caso, as variaveis imutável ou constantes.
+
+Usadas muitas das vezes em programas para representar valores constantes, valores esses que não podem ser alterados ao longo da execução do programa.
+
+Uma vez atribuida o seu valor, não poderá ser possivel redifinir ou mudar o seu estado, o mínimo que pode acontecer é dar um erro de compilação na execução do programa.
+Para definir uma variavel como constante no Java basta usar a palavra reservada final antes do tipo de dados, e seguindo boas prátikcas da comunidade Java, toda constante de ver ser escrita completamente em maiuscula.
+
+1º Ex.: final double PI = 3.14;
+2º Ex.: final float GRAVIDADE = 9.8f;
+
+
+

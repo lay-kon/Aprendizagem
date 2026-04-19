@@ -53,7 +53,7 @@
     - boolean : Boolean
 
     
-    
+    OBS: Tipos primitivos possuem menos capacidade de memória (armazenamento) do que as suas Classes Wrapper (do que os seus Envolocros)
     
 4º ATRIBUIÇÃO DE VALORES:
 

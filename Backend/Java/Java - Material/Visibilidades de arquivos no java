@@ -1,0 +1,33 @@
+No Java, Existe o conceito de visibilidade de ficheiros, no que diz respeito ao acesso de um determinado arquivo.
+São três os métodos usados para dar ou ocultar a visibilidade de um arquivo nos quais se destacam:
+
+	1º default -> quando não escrevemos nada, simplemente declaramos como "static" sem nenhum pré-fixo ou então com o pré-fixo default.
+	   Objectos ou variaveis declaradas como default, só podem ser acessadas por métodos ou classes do mesmo pacote (packge default)
+	   Ex.: default static int number;   OR JUST    static int number;
+	   
+	2º public -> Classes, métodos, bjectos ou variaveis declaradas como public, permitem o acesso completo das suas propriedades.
+	   Podem ser acessadas apartir de qualquer ponto do nosso programa, este conceito, justifica o porque do nosso método principal (method main)
+	   e da nossa classe principal ser public, afim de serem acessadas no momento da execução do programa, por serem public não há nenhuma restrição de acesso.
+	   Ex.: public static int number;
+	   
+	3º private -> O private (privado), é usado para deixar o acesso ou visibilidade de um método ou variavel privado.
+	   Ela torna toda propriedade de um objecto inacessivel para outros pontos do programa excepto a da classe que ela pertence (onde ela foi declarada).
+	   Para poderem ser usados em outros pontos do programa (fora da classe onde foi declarada) deve-se usar os métodos públicos getters e setters.
+	   Afim de definir e acessar valores de suas propriedades.
+	   Ex.: private static int number; 
+	
+	4º protected -> O protected (protegido)
+	
+	
+	
+
+
+OBS:
+
+
+
+	   - static: quer diser que a variavel ou o objecto que esta a ser declarado 
+	   
+	   
+	   
+No Java ao declarar uma variavel deve se ter em conta a visibilidade dela (acesso), pois as veriavei podem ser declaradas localmente ou global, isso no que diz respeito ao conceito de "Escopo", que no Java é delimitado por chaves (blocos {})
