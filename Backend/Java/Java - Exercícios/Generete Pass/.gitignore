@@ -1,26 +1,8 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-
-# Editor-based HTTP Client requests
-/httpRequests/
-
-# Ignored default folder with query files
-/queries/
-
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-
-
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
-.iml
-.idea/
-
 
 ### Eclipse ###
 .apt_generated
