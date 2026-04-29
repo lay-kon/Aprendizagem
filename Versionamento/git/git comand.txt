@@ -1,7 +1,7 @@
 1º COMANDOS GENÉRICOS DO TERMINAL
 
 touch => para criar um arquivo
-nano => para abrir um arquivo pelo terminal
+nano => para abrir um arquivo pelo terminal e poder editá-ló
 cat => para exibir na tela do terminal o conteudo de um arquivo
 cat >> => usado para permitir escrever no terminal que nem o nano limitado
 mv => para mover um diretorio ou ficheiro, também pode servir para renomear
