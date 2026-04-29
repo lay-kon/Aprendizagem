@@ -68,7 +68,7 @@ Essa comunicaçao pode ser feita via ssh que é o recoemndado tendo em conta a s
 
 git remote add origin endereco_do_repositorio -> Neste caso, o endereço do respositório passará a ser representado pela palavra origin
 
-git puch origin branch_name -> usado para empurrar os meus arquivos ou atualizações para o github
+git push origin branch_name -> usado para empurrar os meus arquivos ou atualizações para o github
 
 git fetch origin -> este comando serve para comparar e verificar as atualizações do github e do git (serve para analizar os repositorios tanto local e o remoto afim de deixar tudo no mesmo ponto e sincronizado) decidindo se é necessário fazer um puch ou um pull no servidor.
 
