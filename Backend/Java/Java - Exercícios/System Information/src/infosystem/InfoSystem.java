@@ -1,3 +1,6 @@
+package infosystem;
+
+
 /*
     1º Detetar a data actual do sistema
     2º Detetar o idioma do sistema
