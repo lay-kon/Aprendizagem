@@ -1,8 +1,42 @@
 
-@media (min-width: 340px) and (max-width: 480px) {
+@media (max-width: 390px) {
+    .actions-row {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .small-btn {
+        width: auto;
+        min-width: 80px;
+        flex: 1;
+        max-width: 120px;
+
+        padding: 5px 7px;
+    }
+
+    .employee-table th{
+        padding: 8px px;
+        font-size: 11px;
+        width: 2px;
+    }
+    .employee-table td {
+        padding: 8px 4px;
+        font-size: 11px;
+    }
+
+    .employee-table {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 480px) {
     .topbar,
     .topnav {
         padding: 15px 10px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .topbar h1,
@@ -11,8 +45,10 @@
     }
 
     .card {
+        width: 100%;
         padding: 15px;
         border-radius: 10px;
+        box-sizing: border-box;
     }
 
     .card-header h1,
@@ -23,37 +59,45 @@
     .actions-form {
         flex-direction: column;
         gap: 8px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .actions-form .btns {
         width: 100%;
-        min-width: unset;
+        min-width: 0;
+        box-sizing: border-box;
     }
-
 
     .btn-secondary {
         margin-left: 0;
     }
 
-  
     .actions-row {
         flex-direction: column;
+        width: 100%;
     }
 
     .small-btn {
         width: 100%;
-        min-width: unset;
+        min-width: 0;
+        box-sizing: border-box;
     }
 
-  
     .field input {
+        width: 100%;
         padding: 14px 12px;
         font-size: 16px;
+        box-sizing: border-box;
     }
 
     .employee-table {
+        width: 100%;
         font-size: 12px;
         margin-top: 15px;
+        overflow-x: auto;
+        display: block;
+        box-sizing: border-box;
     }
 
     .employee-table th,
@@ -63,15 +107,6 @@
 
     .field {
         margin-bottom: 12px;
+        width: 100%;
     }
-}
-
-/* Tablet styles */
-@media (min-width: 481px) and (max-width: 1024px) {
-    /* Add tablet-specific styles here if needed */
-}
-
-/* Desktop styles */
-@media (min-width: 1025px) {
-    /* Add desktop-specific styles here if needed */
 }

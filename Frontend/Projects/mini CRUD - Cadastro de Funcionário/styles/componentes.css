@@ -1,11 +1,4 @@
-/* ===================================
-   ARQUIVO: componentes.css
-   DESCRIÇÃO: Estilos de componentes reutilizáveis
-   (cards, botões, formulários, tabelas)
-   ================================== */
 
-/* === CARDS === */
-/* Estilo base de um card (caixa com sombra) */
 .card {
     background: var(--cor-branco);
     border-radius: 14px;
@@ -14,12 +7,12 @@
     padding: 25px;
 }
 
-/* Card que ocupa 100% da largura */
+
 .card-full {
     width: 100%;
 }
 
-/* Card centralizado (usado na tela de login) */
+
 .card-center {
     max-width: 420px;
     margin: 40px auto;
@@ -53,7 +46,6 @@
     font-size: 14px;
 }
 
-/* === BOTÕES === */
 /* Estilo base para botões */
 .btns,
 .small-btn {
@@ -64,7 +56,7 @@
     font-size: 14px;
     padding: 12px 18px;
     transition: all 0.3s ease;
-    /* Garante tamanho mínimo para clique em mobile */
+
     min-height: 44px;
     display: flex;
     align-items: center;
@@ -79,13 +71,12 @@
     margin-top: 10px;
 }
 
-/* Efeito ao passar o mouse */
+
 .btns:hover {
     opacity: 0.9;
     transform: translateY(-2px);
 }
 
-/* Efeito ao clicar */
 .btns:active {
     transform: scale(0.98);
 }
@@ -97,7 +88,7 @@
     margin-left: 0;
 }
 
-/* Container de ações (para organizar botões) */
+
 .actions-form {
     display: flex;
     flex-wrap: wrap;
@@ -105,25 +96,25 @@
     margin-top: 15px;
 }
 
-/* Botões dentro do actions-form ocupam espaço igual */
+
 .actions-form .btns {
     flex: 1;
     min-width: 120px;
 }
 
-/* === FORMULÁRIOS === */
-/* Container do formulário */
+
+/*formulário */
 #employee-form {
     width: 100%;
 }
 
-/* Container de cada campo do formulário */
+/* div de input*/
 .field {
     margin-bottom: 15px;
     width: 100%;
 }
 
-/* Rótulo do campo */
+
 .field label {
     display: block;
     margin-bottom: 6px;
@@ -132,7 +123,7 @@
     font-size: 14px;
 }
 
-/* Inputs de texto */
+
 .field input,
 .text-input {
     width: 100%;
@@ -144,15 +135,15 @@
     transition: border-color 0.3s ease;
 }
 
-/* Efeito ao focar no input */
+
 .field input:focus,
 .text-input:focus {
     border-color: var(--cor-azul-escuro);
     box-shadow: 0 0 0 3px rgba(2, 55, 84, 0.1);
 }
 
-/* === TABELAS === */
-/* Tabela de funcionários */
+
+/* Tabela */
 .employee-table {
     width: 100%;
     border-collapse: collapse;
@@ -165,40 +156,38 @@
     border-bottom: 1px solid #e2e8f0;
 }
 
-/* Células da tabela */
 .employee-table th,
 .employee-table td {
     text-align: left;
     padding: 12px 15px;
 }
 
-/* Cabeçalho da tabela */
+
 .employee-table th {
     background-color: #f8fafc;
     color: var(--cor-preto);
     font-weight: bold;
 }
 
-/* Hover nas linhas da tabela */
 .employee-table tbody tr:hover {
     background-color: #fafbfc;
 }
 
-/* Célula vazia (quando não há dados) */
+
 .empty {
     text-align: center;
     padding: 30px;
     color: #999;
 }
 
-/* Container de ações (Editar e Excluir) */
+
 .actions-row {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
 }
 
-/* Botões pequenos (Editar e Excluir) */
+
 .small-btn {
     background-color: var(--cor-sucesso);
     color: var(--cor-branco);
@@ -208,27 +197,25 @@
     min-width: 70px;
 }
 
-/* Botão de perigo (Excluir) */
+
 .small-btn-danger {
     background-color: var(--cor-perigo);
 }
 
-/* Efeito hover nos botões pequenos */
 .small-btn:hover {
     opacity: 0.9;
     transform: translateY(-1px);
 }
 
-/* === GRID DASHBOARD === */
-/* Grid para a página dashboard */
+
+
 .dashboard-grid {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr;
 }
 
-/* === LISTA === */
-/* Estilo da lista de ações */
+
 .info-list {
     list-style: disc inside;
     color: #555;

@@ -4,8 +4,6 @@
 header {
     background-color: var(--cor-azul-escuro);
     padding: 20px 0;
-
-    /* Deixa o header fixo no topo em mobile */  
     position: sticky; 
     top: 0;
 }
@@ -38,7 +36,7 @@ header {
 }
 
 
-/* Container dos links de navegação */
+/* div dos links de navegação */
 .nav-links {
     display: flex;
     align-items: center;
