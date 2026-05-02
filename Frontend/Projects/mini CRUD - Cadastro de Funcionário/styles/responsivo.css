@@ -1,52 +1,41 @@
-/* ===================================
-   ARQUIVO: responsivo.css
-   DESCRIÇÃO: Media queries para responsividade
-   ================================== */
 
-/* === SMARTPHONES (até 480px) === */
-@media (max-width: 480px) {
-    /* Reduz padding do header em telas muito pequenas */
+@media (min-width: 340px) and (max-width: 480px) {
     .topbar,
     .topnav {
         padding: 15px 10px;
     }
 
-    /* Reduz tamanho do título em telas pequenas */
     .topbar h1,
     .logo {
         font-size: 18px;
     }
 
-    /* Reduz padding do card */
     .card {
         padding: 15px;
         border-radius: 10px;
     }
 
-    /* Ajusta tamanho de títulos */
     .card-header h1,
     .card-header h2 {
         font-size: 22px;
     }
 
-    /* Botões empilhados verticalmente em mobile */
     .actions-form {
         flex-direction: column;
         gap: 8px;
     }
 
-    /* Botão ocupa 100% em mobile */
     .actions-form .btns {
         width: 100%;
         min-width: unset;
     }
 
-    /* Secundário sem margem esquerda */
+
     .btn-secondary {
         margin-left: 0;
     }
 
-    /* Botões pequenos também empilhados */
+  
     .actions-row {
         flex-direction: column;
     }
@@ -56,13 +45,12 @@
         min-width: unset;
     }
 
-    /* Inputs maiores para tocar melhor */
+  
     .field input {
         padding: 14px 12px;
         font-size: 16px;
     }
 
-    /* Tabela em modo mobile com scroll horizontal */
     .employee-table {
         font-size: 12px;
         margin-top: 15px;
@@ -73,195 +61,17 @@
         padding: 10px 8px;
     }
 
-    /* Reduce field spacing */
     .field {
         margin-bottom: 12px;
     }
 }
 
-/* === TABLETS PEQUENOS (481px - 640px) === */
-@media (min-width: 481px) and (max-width: 640px) {
-    /* Aumenta um pouco o padding */
-    .topbar,
-    .topnav {
-        padding: 18px 15px;
-    }
-
-    /* Espaço melhor no card */
-    .card {
-        padding: 20px;
-    }
-
-    /* Botões lado a lado, mas com mais espaço */
-    .actions-form {
-        gap: 12px;
-    }
-
-    /* Tabela com fonte um pouco maior */
-    .employee-table {
-        font-size: 13px;
-    }
+/* Tablet styles */
+@media (min-width: 481px) and (max-width: 1024px) {
+    /* Add tablet-specific styles here if needed */
 }
 
-/* === TABLETS (641px - 768px) === */
-@media (min-width: 641px) and (max-width: 768px) {
-    /* Padding padrão */
-    .topbar,
-    .topnav {
-        padding: 20px 20px;
-    }
-
-    /* Card com mais espaço */
-    .card {
-        padding: 22px;
-    }
-
-    /* Dashboard começa a mostrar lado a lado */
-    .dashboard-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-    }
-
-    /* Botões com espaço melhor */
-    .actions-form {
-        gap: 12px;
-    }
-
-    .btn-secondary {
-        margin-left: 8px;
-    }
-}
-
-/* === TABLETS GRANDES e DESKTOP PEQUENO (769px - 1024px) === */
-@media (min-width: 769px) {
-    /* Volta layout normal */
-    main {
-        padding: 35px 25px;
-    }
-
-    /* Card com mais espaço */
-    .card {
-        padding: 28px;
-    }
-
-    /* Dashboard em 2 colunas */
-    .dashboard-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
-    }
-
-    /* Nav com espaçamento normal */
-    .nav-links {
-        gap: 20px;
-    }
-
-    /* Botões lado a lado normalmente */
-    .actions-form {
-        gap: 15px;
-    }
-
-    .btn-secondary {
-        margin-left: 10px;
-    }
-
-    /* Tabela volta ao normal */
-    .employee-table {
-        font-size: 14px;
-    }
-
-    /* Actions row lado a lado */
-    .actions-row {
-        flex-direction: row;
-    }
-
-    .small-btn {
-        min-width: 80px;
-    }
-}
-
-/* === DESKTOP (1025px - 1440px) === */
+/* Desktop styles */
 @media (min-width: 1025px) {
-    /* Padding generoso */
-    main {
-        padding: 40px 30px;
-    }
-
-    /* Card com espaço amplo */
-    .card {
-        padding: 30px;
-    }
-
-    /* Título do card maior */
-    .card-header h1,
-    .card-header h2 {
-        font-size: 32px;
-    }
-
-    /* Tabela mais espaçosa */
-    .employee-table th,
-    .employee-table td {
-        padding: 14px 18px;
-    }
+    /* Add desktop-specific styles here if needed */
 }
-
-/* === DESKTOP MUITO GRANDE (acima de 1441px) === */
-@media (min-width: 1441px) {
-    main {
-        padding: 50px 40px;
-    }
-
-    .card {
-        padding: 40px;
-    }
-}
-
-/* === MODO PAISAGEM (celular deitado) === */
-@media (max-height: 500px) and (orientation: landscape) {
-    /* Reduz padding vertical */
-    main {
-        padding: 10px 15px;
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    /* Campos menores */
-    .field {
-        margin-bottom: 8px;
-    }
-
-    /* Inputs menores */
-    .field input {
-        padding: 8px 10px;
-        font-size: 14px;
-    }
-
-    /* Títulos menores */
-    .card-header h1,
-    .card-header h2 {
-        font-size: 18px;
-    }
-}
-
-/* === DARK MODE SIMPLES (opcional) === */
-/* Descomentar se quiser ativar dark mode */
-/*
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
-    }
-
-    .card {
-        background-color: #2d2d2d;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .field input {
-        background-color: #3d3d3d;
-        border-color: #555;
-        color: #e0e0e0;
-    }
-}
-*/
