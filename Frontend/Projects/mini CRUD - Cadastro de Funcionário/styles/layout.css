@@ -1,0 +1,73 @@
+
+
+/* Estilização do header */
+header {
+    background-color: var(--cor-azul-escuro);
+    padding: 20px 0;
+
+    /* Deixa o header fixo no topo em mobile */  
+    position: sticky; 
+    top: 0;
+}
+
+.topbar,.topnav {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Estilização do Título do cabeçalho */
+.topbar h1 {
+    color: var(--cor-branco);
+    font-size: 24px;
+    letter-spacing: 0.02em;
+}
+
+/* Logo do painel */
+.logo {
+    color: var(--cor-branco);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Container dos links de navegação */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Estilação dos links*/
+.nav-links a {
+    color: var(--cor-branco);
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 12px;
+
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/*Etilização do main*/
+main {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#section-main {
+    width: 100%;
+}
