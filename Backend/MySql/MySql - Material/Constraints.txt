@@ -1,0 +1,4 @@
+ALGUNS PARAMETROS DO MYSQL (para campos "Constraints")
+
+unique => valor único
+unsigned => sem sinal para não aceitar sinais (negativo!) (economiza 1 byte para cada registro)
