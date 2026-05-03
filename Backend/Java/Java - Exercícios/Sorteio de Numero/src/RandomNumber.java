@@ -6,7 +6,7 @@ public class RandomNumber {
 
         short random = (short) (0 + Math.random() * (5-0));
 
-        System.out.println("\nEstou a pensar em um número entre 0 e 5");
+        System.out.println("\nEstou a pensar em um valor entre 0 e 5");
         System.out.println("Digite o valor do teu palpite\n");
 
         System.out.print("Valor: ");
@@ -19,7 +19,7 @@ public class RandomNumber {
             if (palpite>5 || palpite<0){
                 System.out.println("Dica: Digitaste Um Valor Fora Do Intervalo.");
             }else {
-                System.out.println("Você Errou!");
+                System.out.println("Errou! Eu pensei no valor "+random);
             }
         }
     }
