@@ -1,0 +1,174 @@
+en
+conf t
+host SW-2
+
+vlan 10
+name RH
+
+vlan 20
+name IT
+
+vlan 30
+name DR
+
+int r f0/1-3
+sw m a
+spann por
+
+int g0/2
+sw m t
+sw t a vlan all
+
+int f0/1
+sw a vlan 10
+
+int f0/2
+sw a vlan 20
+
+
+int f0/3
+sw a vlan 30
+
+
+
+
+
+======================== router 1 ===========================
+
+en
+conf t
+host R1
+int g0/2
+no shut
+ip add 192.168.0.1 255.255.255.0
+
+int r g0/0-1
+no shut
+
+int g0/0
+ip add 10.0.0.1 255.255.255.252
+
+int g0/1
+ip add 10.1.1.1 255.255.255.252
+
+
+
+<<<<<<<<<<<< 1
+
+Rota main
+
+ip route 0.0.0.0 0.0.0.0 10.0.0.2
+
+
+ip route 0.0.0.0 0.0.0.0 10.1.1.2 6
+
+======================== router 2 ===========================
+
+en
+conf t
+host R2
+
+int r g0/0-2
+no shut
+
+int g0/0
+ip add 10.0.0.2 255.255.255.252
+
+int g0/1
+ip add 10.4.4.1 255.255.255.252
+
+int g0/2
+ip add 10.2.2.2 255.255.255.252
+
+
+
+<<<<<<<<<<<<
+
+Rota main
+
+ip route 0.0.0.0 0.0.0.0 10.4.4.2
+
+ip route 0.0.0.0 0.0.0.0 10.0.0.1
+
+
+ip route 0.0.0.0 0.0.0.0 10.2.2.1 7
+
+
+======================== router 3 ===========================
+
+en
+conf t
+host R3
+
+int r g0/0-2
+no shut
+
+int g0/0
+ip add 10.3.3.1 255.255.255.252
+
+int g0/1
+ip add 10.1.1.2 255.255.255.252
+
+int g0/2
+ip add 10.2.2.1 255.255.255.252
+
+
+
+
+<<<<<<<<<<<<
+
+Rota main
+
+ip route 0.0.0.0 0.0.0.0 10.3.3.2
+
+ip route 0.0.0.0 0.0.0.0 10.1.1.1
+
+
+ip route 0.0.0.0 0.0.0.0 10.2.2.2 8
+
+
+======================== router 4 ===========================
+
+en
+conf t
+host R4
+
+int r g0/0-2
+no shut
+
+int g0/0
+ip add 10.3.3.2 255.255.255.252
+
+int g0/1
+ip add 10.4.4.2 255.255.255.252
+
+
+int g0/2.10
+no shut
+encap dot1q 10
+ip add 172.16.10.1 255.255.255.0
+
+
+int g0/2.20
+no shut
+encap dot1q 20
+ip add 172.16.20.1 255.255.255.0
+
+
+int g0/2.30
+no shut
+encap dot1q 30
+ip add 172.16.30.1 255.255.255.0
+
+
+
+
+<<<<<<<<<<<<
+
+Rota main
+
+ip route 0.0.0.0 0.0.0.0 10.4.4.1
+
+
+ip route 0.0.0.0 0.0.0.0 10.3.3.1 5
+
