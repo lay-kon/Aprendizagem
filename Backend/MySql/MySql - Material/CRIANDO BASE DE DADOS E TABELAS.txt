@@ -1,0 +1,17 @@
+CRIANDO BASE DE DADOS E TABELAS
+
+Definir a lingua no banco (esses comandos ou parametros são chamados de "Constraints" uft8 deve ser minusculo):
+ 
+Ex.:	create database cadastro
+	default charracter set utf8
+	default collate utf8_general_ci;
+
+	create table pessoas()default charset = uft8;
+
+
+Ao criar ou eliminar uma base de dados ou uma tabela, o comando create e drop oferece dois parametros:
+
+1º if not exists ==> se não existir cria
+2º if exists ==> se existir cria
+
+Ex.: create table if not exists pessoas();

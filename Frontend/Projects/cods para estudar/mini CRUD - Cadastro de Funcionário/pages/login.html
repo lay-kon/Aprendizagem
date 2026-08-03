@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#023754">
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/componentes.css">
+    <link rel="stylesheet" href="../styles/responsivo.css">
+    
+    <title>Login Admin</title>
+
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <h1>Administração</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="card card-center">
+
+            <h2>Login do Administrador</h2>
+
+            <form id="login-form">
+
+                <!-- Campo de email -->
+                <div class="field">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required autocomplete="username" placeholder="admin@empresa.com">
+                </div>
+                
+                <!-- Campo de senha -->
+                <div class="field">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" required autocomplete="current-password" placeholder="admin123">
+                </div>
+                
+                <button type="submit" class="btns">Entrar</button>
+            </form>
+        </section>
+    </main>
+
+
+    <script src="../scripts/auth.js"></script>
+</body>
+</html>

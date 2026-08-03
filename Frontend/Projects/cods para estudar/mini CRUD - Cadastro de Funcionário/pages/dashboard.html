@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/func-ger.css">
+    <title>Dashboard Admin</title>
+</head>
+<body>
+    <header>
+        <nav class="topnav">
+            <a href="dashboard.html" class="logo">Painel Admin</a>
+            <div class="nav-links">
+                <a href="func-ger.html">Gerir Funcionários</a>
+                <a href="#" onclick="logout()">Sair</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="dashboard-grid">
+            <article class="card card-full">
+                <h2>Bem-vindo, Administrador</h2>
+                <p>O painel está pronto. Use o menu para navegar até o gerenciamento de funcionários.</p>
+                <a href="func-ger.html" class="btns">Ir para Gerir Funcionários</a>
+            </article>
+            <article class="card card-full">
+                <h3>Ações disponíveis</h3>
+                <ul class="info-list">
+                    <li>Adicionar novo funcionário</li>
+                    <li>Editar funcionários existentes</li>
+                    <li>Excluir registros com confirmação</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <script src="../scripts/auth.js"></script>
+</body>
+</html>

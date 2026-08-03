@@ -1,0 +1,28 @@
+Alterar e Eliminar Tabelas 
+
+Eliminando tabela:
+	drop table nome_tabela; 
+
+
+Alterando colunas e tabelas (campo, entidade):
+
+1º Adicionando e eliminando campos
+
+	alter table nome_table add column campo dominio;
+	alter table nome_table drop column campo;
+	
+*alterando o campo numa tabela pode se alterar a posição do mesmo, com o after ou first
+
+	Ex.: alter table nome_table add column (o column não é obrigatório) campo dominio first (para o primeiro lugar) after campo (antes  de um campo);
+
+
+2ª Mudar o dominio as constraints e o nome dos campos
+
+	alter table nome_tabela modify campo <dominio e as constraints>;
+
+	*Para mudar o nome não se usa o modify usa-se o change, que possibilita mudar também o dominio e as constraints
+
+	alter table nome_tabela change campo_old campo_new <dominio e as constraints>;
+
+3º Mudar o nome da tabela completa
+	alter table nome_tabela rename to nome_tabela_new;

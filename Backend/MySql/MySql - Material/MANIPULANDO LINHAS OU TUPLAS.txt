@@ -1,0 +1,17 @@
+MANIPULANDO LINHAS OU TUPLAS
+
+1º UPDATE
+update nome_tabela set campo1 = '', campo2 = '' where condição limit (opcional mais fortimente recomendado);
+
+update nome_tabela set campo1 = '', campo2 = '';
+
+2º DELETE
+delete from nome_tabela where condição limit (opcional mais fortimente recomendado);
+
+
+
+3º TRUNCATE
+truncate table nome_tabela;
+truncate nome_tabela;
+
+OBS: limite server para limitar uma determinada acção.

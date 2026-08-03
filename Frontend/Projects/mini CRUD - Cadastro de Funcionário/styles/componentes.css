@@ -1,0 +1,228 @@
+
+.card {
+    background: var(--cor-branco);
+    border-radius: 14px;
+    /* Sombra que dá profundidade */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+
+.card-full {
+    width: 100%;
+}
+
+
+.card-center {
+    max-width: 420px;
+    margin: 40px auto;
+    text-align: center;
+    width: 100%;
+}
+
+/* Cabeçalho do card */
+.card-header {
+    margin-bottom: 20px;
+}
+
+/* Títulos dentro do card */
+.card-header h1,
+.card-header h2 {
+    color: var(--cor-azul-escuro);
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.card-header h3 {
+    color: var(--cor-azul-escuro);
+    font-size: 20px;
+}
+
+/* Parágrafos dentro do card */
+.card-header p,
+.info-text {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Estilo base para botões */
+.btns,
+.small-btn {
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 12px 18px;
+    transition: all 0.3s ease;
+
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Botão principal */
+.btns {
+    width: 100%;
+    background-color: var(--cor-azul-escuro);
+    color: var(--cor-branco);
+    margin-top: 10px;
+}
+
+
+.btns:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.btns:active {
+    transform: scale(0.98);
+}
+
+/* Botão secundário (cancelar) */
+.btn-secondary {
+    background-color: var(--cor-cinza-medio);
+    color: var(--cor-branco);
+    margin-left: 0;
+}
+
+
+.actions-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+
+.actions-form .btns {
+    flex: 1;
+    min-width: 120px;
+}
+
+
+/*formulário */
+#employee-form {
+    width: 100%;
+}
+
+/* div de input*/
+.field {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--cor-preto);
+    font-size: 14px;
+}
+
+
+.field input,
+.text-input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 2px solid var(--cor-borda-input);
+    background-color: var(--cor-fundo-input);
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+
+.field input:focus,
+.text-input:focus {
+    border-color: var(--cor-azul-escuro);
+    box-shadow: 0 0 0 3px rgba(2, 55, 84, 0.1);
+}
+
+
+/* Tabela */
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* Linhas da tabela */
+.employee-table tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.employee-table th,
+.employee-table td {
+    text-align: left;
+    padding: 12px 15px;
+}
+
+
+.employee-table th {
+    background-color: #f8fafc;
+    color: var(--cor-preto);
+    font-weight: bold;
+}
+
+.employee-table tbody tr:hover {
+    background-color: #fafbfc;
+}
+
+
+.empty {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+}
+
+
+.actions-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+
+.small-btn {
+    background-color: var(--cor-sucesso);
+    color: var(--cor-branco);
+    padding: 8px 12px;
+    font-size: 12px;
+    flex: 1;
+    min-width: 70px;
+}
+
+
+.small-btn-danger {
+    background-color: var(--cor-perigo);
+}
+
+.small-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+
+
+.dashboard-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+
+.info-list {
+    list-style: disc inside;
+    color: #555;
+    margin-left: 15px;
+}
+
+.info-list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}

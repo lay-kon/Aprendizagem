@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#023754">
+
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/componentes.css">
+    <link rel="stylesheet" href="../styles/responsivo.css">
+    
+    <title>Gerir Funcionários</title>
+</head>
+<body>
+
+    <header>
+        <nav class="topnav">
+            <a href="../index.html" class="logo">Painel Administrativo</a>
+            
+            <div class="nav-links">
+
+                <a href="../index.html">Home</a>
+
+                <a href="#">Sair</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="section-main">
+            
+            <div class="card card-full">
+
+                <div class="card-header">
+                    <h1>Gerir Funcionários</h1>
+                    <p>Adicione, edite ou remova funcionários rapidamente.</p>
+                </div>
+
+                <form id="employee-form" class="form-grid">
+                    
+                    <!-- Campo de nome -->
+                    <div class="field">
+                        <label for="name-func">Nome</label>
+
+                        <input 
+                            style="text-transform: capitalize;" 
+                            type="text" 
+                            name="name" 
+                            id="name-func" 
+                            required 
+                            class="text-input" 
+                            placeholder="Nome completo"
+                        >
+                    </div>
+                    
+                    <!-- Campo de email -->
+                    <div class="field">
+                        <label for="email-func">E-mail</label>
+                        <input 
+                            type="email" 
+                            name="email" 
+                            id="email-func" 
+                            required 
+                            class="text-input" 
+                            placeholder="email@empresa.com"
+                        >
+                    </div>
+                    
+                    <!-- Botões do formulário -->
+                    <div class="actions-form">
+                        
+                        <button type="submit" class="btns">Salvar Funcionário</button>
+                        
+                        
+                        <button type="button" id="cancel-edit" class="btns btn-secondary">Cancelar</button>
+                    </div>
+                </form>
+
+                <table class="employee-table">
+                    <!-- Cabeçalho da tabela -->
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employee-list">
+                        <!-- Mensagem inicial quando não há funcionários -->
+                        <tr>
+                            <td colspan="3" class="empty">Nenhum funcionário cadastrado.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="../scripts/func-ger.js"></script>
+</body>
+</html>

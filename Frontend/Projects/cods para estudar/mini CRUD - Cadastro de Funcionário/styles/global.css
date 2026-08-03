@@ -1,0 +1,49 @@
+
+
+/*Configuração geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Estilização padrão do body*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #1f2937;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Removendo outline padrão dos inputs*/
+input:focus,
+button:focus {
+    outline: none;
+}
+
+/* Defindo cores principais para as paginas*/
+:root {
+    /* Cores principais */
+    --cor-azul-escuro: #023754;
+    --cor-cinza-claro: #f1f5f9;
+    --cor-cinza-medio: #64748b;
+    --cor-branco: #ffffff;
+    --cor-preto: #1f2937;
+    
+    /* Cores para inputs */
+    --cor-fundo-input: #f8fafc;
+    --cor-borda-input: #cbd5e1;
+    
+    /* Cores para status */
+    --cor-sucesso: #2563eb;
+    --cor-perigo: #dc2626;
+}
+h2{
+    margin-bottom: 40px;
+}
+label{
+    float: left;
+    margin-left: 2px;
+}
