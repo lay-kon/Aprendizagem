@@ -23,7 +23,7 @@ public class User {
     @Id//essa anotação server para informar ao banco que esse atributo é um id
     @Column(name = "id", unique = true)//essa anotação server para colocar informações ou propriedades da coluna no banco de dados
     @GeneratedValue(strategy = GenerationType.IDENTITY)//essa anotação server para informar ao banco que o atributo deve ser auto-incrementado (auto-increment)
-    private long id;
+    private Long id;
 
 
     @Column(name="username")//essa anotação server para colocar informações ou propriedades da coluna no banco de dados
@@ -49,7 +49,7 @@ public class User {
     public User(){
 
     }
-    public User(long id,String username, String password){
+    public User(Long id,String username, String password){
         this.id=id;
         this.username=username;
         this.password=password;
@@ -58,11 +58,11 @@ public class User {
 
     //Getters e Setters
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

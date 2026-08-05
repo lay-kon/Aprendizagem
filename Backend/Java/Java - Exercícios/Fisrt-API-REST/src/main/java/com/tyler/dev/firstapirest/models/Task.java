@@ -19,7 +19,7 @@ public class Task {
     @Id
     @Column(name = "id",unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     //O task é dependente do user
     @ManyToOne //Server para infromar ao banco que é uma relação muitos(Many) para(To) um(One)
@@ -39,7 +39,7 @@ public class Task {
     public Task(){
 
     }
-    public Task(long id, String descritionTask){
+    public Task(Long id, String descritionTask){
         this.id=id;
         this.descritionTask = descritionTask;
     }
@@ -48,11 +48,11 @@ public class Task {
 
     //Getters e Setters
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
