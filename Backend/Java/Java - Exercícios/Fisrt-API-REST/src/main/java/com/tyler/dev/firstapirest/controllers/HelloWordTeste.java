@@ -1,4 +1,4 @@
-package com.tyler.dev.firstapirest.controller;
+package com.tyler.dev.firstapirest.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
