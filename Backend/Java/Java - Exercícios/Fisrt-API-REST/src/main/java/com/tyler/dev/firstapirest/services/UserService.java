@@ -1,20 +1,21 @@
 package com.tyler.dev.firstapirest.services;
 
 import com.tyler.dev.firstapirest.models.User;
-import com.tyler.dev.firstapirest.repositorys.TaskRepository;
 import com.tyler.dev.firstapirest.repositorys.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
+
+@Service //Server para infromar ao spring que esta classe é um service
 public class UserService {
+
+    //Preciso listar, criar, eliminar, editar usários
 
     @Autowired
     UserRepository userRepository;
-
-    @Autowired
-    TaskRepository taskRepository;
 
     public User findUserById(long id){
 
@@ -27,7 +28,7 @@ public class UserService {
     }
 
     @Transactional
-    public User creteUser(User obj){
+    public User createUser(User obj){
 
         obj.setId(null);
 

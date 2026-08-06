@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
+
 @Service
 public class TaskService {
 
@@ -17,7 +18,7 @@ public class TaskService {
     @Autowired
     TaskRepository taskRepository;
 
-    @Autowired
+    @Autowired //server para infomar o spring que queremos usar uma instancia disso sem, necessidade de usar o new
     UserService userService;
 
     public Task findTaskById(Long id){
@@ -26,23 +27,23 @@ public class TaskService {
         return task.orElseThrow(()->new RuntimeException("Tarefa Não Encontrada ID: "+id+" Tipo: "+Task.class.getName()));
     }
 
-    @Transactional
+    @Transactional //Essa anotação serve para informar ao spring que o método vai fazer alteração no banco
     public Task createTask(Task obj){
 
-        User user = this.userService.findUserById(obj.getUser().getId());
+        User user = this.userService.findUserById(obj.getUser().getId()); //Ele retorna (o findUser/TaskByID) o user nesse id
 
-        obj.setId(null);
-        obj.setUser(user);
+        obj.setId(null); //seta o id da tarefa como nulo
+        obj.setUser(user); //garante que o a tarefa tenha o id certo do user, uma vez que manda todo objecto
 
-        return this.taskRepository.save(obj);
+        return this.taskRepository.save(obj); //salva o a tarefa
     }
 
     @Transactional
     public Task updateTask(Task newObj){
 
-        Task oldObj = findTaskById(newObj.getId());
+        Task oldObj = findTaskById(newObj.getId());//Ele retorna (o findUser/TaskByID) a tarefa nesse id
 
-        oldObj.setDescritionTask(newObj.getDescritionTask());
+        oldObj.setDescritionTask(newObj.getDescritionTask()); //atualiza a tarefa
 
         return this.taskRepository.save(oldObj);
     }

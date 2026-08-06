@@ -1,5 +1,6 @@
 package com.tyler.dev.firstapirest.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
@@ -9,14 +10,14 @@ import jakarta.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Entity
 @Table(name = User.TABLE_NAME)
-
 public class User {
 
     //Interfaces Etiquetas
-    public interface creteUser{}
-    public interface updateUser{}
+    public interface CreateUser {}
+    public interface UpdateUser {}
 
     public static final String TABLE_NAME = "user";//Definindo o nome da tabela no banco de dados
 
@@ -26,17 +27,17 @@ public class User {
     private Long id;
 
 
-    @Column(name="username")//essa anotação server para colocar informações ou propriedades da coluna no banco de dados
-    @NotNull(groups = {creteUser.class,updateUser.class})//essa anotação server para garantir que na hora de criar o user, não seje permitido, username nulo (null)
-    @NotEmpty(groups = {creteUser.class, updateUser.class})//essa anotação server para garantir que na hora de criar o user, não seje permitido, username vazio ("")
-    @Size(groups = {creteUser.class, updateUser.class}, min = 5, max = 100)//essa anotação server para garantir que na hora de criar o user, não seje permitido, caracteres que passe do limite estabelecido
+    @Column(name="username", unique = true)//essa anotação server para colocar informações ou propriedades da coluna no banco de dados
+    @NotNull(groups = CreateUser.class)//essa anotação server para garantir que na hora de criar o user, não seje permitido, username nulo (null)
+    @NotEmpty(groups = CreateUser.class)//essa anotação server para garantir que na hora de criar o user, não seje permitido, username vazio ("")
+    @Size(groups = CreateUser.class, min = 3, max = 100)//essa anotação server para garantir que na hora de criar o user, não seje permitido, caracteres que passe do limite estabelecido
     private String username;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)//essa anotação server para não retornar a pass do user no body em json
     @Column(name="passowrd")//essa anotação server para colocar informações ou propriedades da coluna no banco de dados
-    @NotNull(groups = {creteUser.class,updateUser.class})//essa anotação server para garantir que na hora de criar e atualizar a senha do user, não seje permitido, senha nula
-    @NotEmpty(groups = {creteUser.class, updateUser.class})//essa anotação server para garantir que na hora de criar e atualizar a senha do user, não seje permitido, senha vazia
-    @Size(groups = {creteUser.class, updateUser.class}, min = 3, max = 20)//essa anotação server para garantir que na hora de criar e atualizar a senha do user, não seje permitido, caracteres que passe do limite estabelecido
+    @NotNull(groups = {CreateUser.class, UpdateUser.class})//essa anotação server para garantir que na hora de criar e atualizar a senha do user, não seje permitido, senha nula
+    @NotEmpty(groups = {CreateUser.class, UpdateUser.class})//essa anotação server para garantir que na hora de criar e atualizar a senha do user, não seje permitido, senha vazia
+    @Size(groups = {CreateUser.class, UpdateUser.class}, min = 3, max = 20)//essa anotação server para garantir que na hora de criar e atualizar a senha do user, não seje permitido, caracteres que passe do limite estabelecido
     private String password;
 
 
@@ -82,6 +83,7 @@ public class User {
         this.password = password;
     }
 
+    @JsonIgnore //Serve para infromar ao spring que não deve retornar task se eu pedi so user
     public List<Task> getTasks() {
         return tasks;
     }
