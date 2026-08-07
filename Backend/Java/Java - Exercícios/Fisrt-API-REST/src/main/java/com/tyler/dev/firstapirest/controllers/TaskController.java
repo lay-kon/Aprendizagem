@@ -2,7 +2,9 @@ package com.tyler.dev.firstapirest.controllers;
 
 import com.tyler.dev.firstapirest.models.Task;
 import com.tyler.dev.firstapirest.services.TaskService;
+import com.tyler.dev.firstapirest.services.UserService;
 import jakarta.validation.Valid;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping("/task")
@@ -19,6 +22,9 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
+    @Autowired
+    private UserService userService;
+
     @GetMapping("/{id}")
     public ResponseEntity<Task> findTaskById(@PathVariable Long id){
         //return ResponseEntity.ok().body(taskService.findTaskById(id));
@@ -26,6 +32,13 @@ public class TaskController {
 
         return ResponseEntity.ok().body(task);
         //return ResponseEntity.ok(task);
+    }
+
+    @GetMapping("user/{id}")
+    public ResponseEntity<List<Task>> findAllTaskById(@PathVariable Long id){
+        List<Task> tasks = taskService.findAllTaskById(id);
+
+        return ResponseEntity.ok().body(tasks);
     }
 
     @PostMapping

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -27,7 +28,13 @@ public class TaskService {
         return task.orElseThrow(()->new RuntimeException("Tarefa Não Encontrada ID: "+id+" Tipo: "+Task.class.getName()));
     }
 
+    public List<Task> findAllTaskById(Long userId){
+        List<Task> tasks = this.taskRepository.findByUser_Id(userId);
+        return tasks;
+    }
+
     @Transactional //Essa anotação serve para informar ao spring que o método vai fazer alteração no banco
+
     public Task createTask(Task obj){
 
         User user = this.userService.findUserById(obj.getUser().getId()); //Ele retorna (o findUser/TaskByID) o user nesse id
